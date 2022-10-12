@@ -1,0 +1,31 @@
+﻿@{ViewBag.Title = "Create Person";}
+
+<form asp-controller="Home" asp-action="DisplayPerson" method="post">
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name="firstname" required></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="lastname" required></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" min="0" name="age" required></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><textarea type="text" rows="10" cols="40" name="desc" required></textarea></td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit" />
+</form>

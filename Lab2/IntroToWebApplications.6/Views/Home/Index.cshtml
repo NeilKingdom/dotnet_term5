@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Neil Kingdom CST8359 Lab 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <h1>About Me</h1><br />
+        <h5>Name: Neil Kingdom</h5><br />
+        <h5>Student #: 040967309</h5><br />
+        <h5>Email: king0482</h5><br />
+        <p>
+            My name is Neil Kingdom. I am a student in the CET program at Algonquin College in my 4th year.<br />
+            I enjoy programming, engineering, and reading.<br />
+        </p>
+        <p>
+            During this course, I hope to learn the fundamentals of C#, ASP.NET, and the core concepts of building
+            web applications.<br />
+            I would like to learn more about enterprise web applications, how they are managed, and the technologies
+            that are commonly used.
+        </p>
+        <h1>Q&A</h1>
+        <ol>
+            <li>
+                C# is a strongly typed language.<br />
+                This is because it enforces types and does not allow variables to be reassigned with literals that do not correspond with the type assigned at the time of declaration.
+            </li>
+            <li>
+                C# is both imperative and declarative.<br />
+                It has C style statements which make it primarily imperative, however, it also has LINQ statements, which are SQL-like statements that are declarative.
+            </li>
+            <li>
+                Implicit types in C# are variables that are declared using the 'var' keyword.<br />
+                Their type is deduced based upon the literal that they are assigned.<br />
+                For this reason, implicit types must be assigned a value at declaration.<br />
+                E.g. var str = "This is a string literal";
+            </li>
+            <li>
+                A value type inherits properties from System.ValueType.<br />
+                It is C#'s closest equivallent to primitives (e.g. bool, byte, sbyte, char, decimal, double, float, int, etc.)<br />
+                Reference types inherit from System.Object and include enums, strings, and arrays.<br />
+                Value types live in stack space, and reference types live in heap space.
+            </li>
+            <li>
+                A property in C# relates to a field/member of the class.<br />
+                Typically, a property provides getters and setters for a specific field/member variable.<br />
+                More broadly, they have accessors that specify the statements executed when their values are read or written.
+            </li>
+            <li>
+                MVC is a design pattern that stands for Model, View, Controller.<br />
+                It is commonly used for web applications in particular. Here are the purposes of each component:
+                <ul>
+                    <li><strong>Model:</strong>&nbsp;Represents the state of the application and controls business logic or operations.</li>
+                    <li><strong>View:</strong>&nbsp;Presents content through the UI</li>
+                    <li><strong>Controller:</strong>&nbsp;Components that handle the user interaction and are an intermediary between the Model and View (I/O).</li>
+                </ul>
+            </li>
+            <li>
+                Program.cs in the context of this project is where Main() is located and where the initialization occurs.<br />
+                it sets up things like the app's host, configures services, creates the app's request processing pipeline, etc.
+            </li>
+            <li>
+                True; MVC Core applications can host themselves due to the fact that Kestrel is included and enabled in ASP.NET Core project templates, meaning that that will be set as the default server for our applications.
+            </li>
+            <li>
+                We actually create a struct in stack space with a member variable that keeps track of whether or not the variable is null.<br />
+                The variable never actually becomes null because value types cannot truly be null (only reference types can).
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <strong>IaaS:</strong>&nbsp;Infrastructure as a service controls the servers/bare-metal machines and hosts an OS of the user's choosing.<br />
+                        It gives the user control of the OS, and anything higher-level than that e.g. applications and data.
+                    </li>
+                    <li>
+                        <strong>PaaS:</strong>&nbsp;Platform as a service grants only the application and data for the user to manage.<br />
+                        This allows for easy hosting of applications and files without worrying about managing system resources.
+                    </li>
+                    <li>
+                        <strong>SaaS:</strong>&nbsp;Software as a service would be something like MS Office365 where the user does not control anything about the hosting process.<br />
+                        Rather, the user pays for software that interacts with the cloud in some manner, but does not own it.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                A Git branch essentially creates a copy of the project directory and allows the user to make changes without affecting the other branch(es).<br />
+                This is commonly used when adding features to an existing project.<br />
+                Rather than push things to mainline that could break a product that is actively used by users, we can create a feature branch to develop those changes, then push to a testing branch, and then merge with mainline when we're finished.
+            </li>
+            <li>
+                Dependency injection essentially allows us to create multiple implementations of functiions using interfaces.<br />
+                This makes it easy for us to switch between dependencies without having to change pre-existing code all over our application.<br />
+                Essentially, it is used to make our lives simpler as programmers.
+            </li>
+        </ol>
+    </div>
+</body>

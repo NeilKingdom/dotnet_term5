@@ -1,0 +1,30 @@
+﻿@{ViewBag.Title = "Singing...";}
+@{string bottle;}
+
+@for (int n = int.Parse(TempData["NumBottles"].ToString()); n > 0; n--)
+{
+    <p>
+        @{bottle = (n < 3) ? "bottle" : "bottles";}
+        @n green @bottle hanging on the wall,<br />
+        @n green @bottle hanging on the wall,<br />
+        And if one green bottle should accidentally fall,<br />
+        @{
+            int tmp = n - 1;
+            bottle = (tmp < 2) ? "bottle" : "bottles";
+
+            if (tmp > 0)
+            {
+                    <span>There'll be @tmp green @bottle hanging on the wall.</span><br />
+            }
+            else
+            {
+                    <span>There'll be no green @bottle hanging on the wall.</span><br />
+                    <p>There is no green bottle standing on the wall.</p>
+            }
+        }
+    </p>
+}
+
+<form asp-controller="Home" asp-action="SongForm" method="post">
+    <input type="submit" value="Play Again" />
+</form>

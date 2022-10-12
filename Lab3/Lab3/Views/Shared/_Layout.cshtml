@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+<header>
+    <div class="text">
+        <h1>Welcome to Neil Kingdom's Lab 3</h1>
+        <p>Name: Kingdom, Neil</p>
+
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Show the song!", "SongForm","Home")
+        @Html.ActionLink("Persons", "CreatePerson", "Home")
+    </div>
+</header>
+<body>
+    <div class="text">
+        @RenderBody()
+    </div>
+</body>
+<footer>
+    <div class="text">
+        <h3>Layout</h3>
+        <p>
+            The _Layout.cshtml contains the primary layout for each page.<br />
+            It can include tags such as @@RenderBody() to render a full view, or @@RenderSection() to render partial views.
+        </p>
+        <h3>Directory Structure</h3>
+        <ul>
+            <li>
+                Controllers belong in the Controllers directory. This is because the URL routing will decide which controllers 
+                to use based on the naming of C# classes in this directory.
+            </li>
+            <li>
+                Similarly, views belong in the Views directory because when View() is called from an action in the controller, the
+                corresponding view gets rendered.
+            </li>
+            <li>
+                Static content should be stored under wwwroot (such as the StyleSheet.css file).
+            </li>
+            <li>
+                Finally, _Layout.cshtml should be placed under Shared because _ViewStart.cshtml loads _Layout.cshtml and it is
+                expected to be under Shared. Note that it does not necessarily need to be placed under Shared.
+            </li>
+        </ul>
+        <h3>Default Layout</h3>
+        <p>
+            The default layout (set by _ViewStart.cshtml) is _Layout.cshtml.
+        </p>
+    </div>
+</footer>
+</html>
