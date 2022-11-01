@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "7Inku5Iadx02BXAoeknWoqzx9iSm5S7QW9SrPtJfPfc=",
+  "Source": "Lab3",
+  "BasePath": "_content/Lab3",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Lab3/wwwroot",
+      "Source": "Lab3",
+      "ContentRoot": "/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/wwwroot/",
+      "BasePath": "_content/Lab3",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/wwwroot/css/StyleSheet.css",
+      "SourceId": "Lab3",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/wwwroot/",
+      "BasePath": "_content/Lab3",
+      "RelativePath": "css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/StyleSheet.css"
+    }
+  ]
+}

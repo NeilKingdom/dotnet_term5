@@ -1,0 +1,39 @@
+﻿header, footer {
+    background-color: lightgray;
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: Calibri;
+}
+
+.text {
+    padding: 20px 0 20px 0;
+    margin-left: 5%;
+}
+
+a, a:visited {
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    text-decoration: none;
+    color: steelblue;
+}
+
+a:hover {
+    border-radius: 5px;
+    background: lightslategray;
+    color: floralwhite;
+}

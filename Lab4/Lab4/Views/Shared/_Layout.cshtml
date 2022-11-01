@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Entity Framework</title>
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <table class="container-fluid">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <tr class="navbar-nav flex-grow-1">
+                        <td class="nav-item">
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                                Real Estate Market
+                            </a>
+                        </td>
+                        <td class="nav-item nav-link text-dark">
+                            @* arg0=Link text, arg1=Action, arg2=Controller name *@
+                            @Html.ActionLink("Home", "Index", "Home")
+                        </td>
+                        <td class="nav-item nav-link text-dark">
+                            @Html.ActionLink("Clients", "Index", "Clients")
+                        </td>
+                        <td class="nav-item nav-link text-dark">
+                            @Html.ActionLink("Brokerages", "Index", "Brokerages")
+                        </td>
+                    </tr>
+                </div>
+            </table>
+        </nav>
+    </header>
+    <div class="container">
+        <body class="pb-3">
+            @RenderBody()
+        </body>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - EntityFramework
+        </div>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</html>
+

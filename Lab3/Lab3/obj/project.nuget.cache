@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "whtR7mUzxB/ZM2Kfb0vR7F9SmUU5n8cODGYaDdlEgzFSPVqJqxzW1LTEM8RA8kBomRXGpfNZMgSUW4vKwcBS5w==",
+  "success": true,
+  "projectFilePath": "/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/Lab3.csproj",
+  "expectedPackageFiles": [
+    "/home/neil/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.10/microsoft.aspnetcore.app.ref.6.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

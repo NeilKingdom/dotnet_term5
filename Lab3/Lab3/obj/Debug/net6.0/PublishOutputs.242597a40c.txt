@@ -1,0 +1,7 @@
+/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/bin/Debug/net6.0/publish/Lab3
+/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/bin/Debug/net6.0/publish/appsettings.Development.json
+/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/bin/Debug/net6.0/publish/appsettings.json
+/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/bin/Debug/net6.0/publish/Lab3.dll
+/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/bin/Debug/net6.0/publish/Lab3.deps.json
+/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/bin/Debug/net6.0/publish/Lab3.runtimeconfig.json
+/home/neil/devel/school/2022_Fall/DOTNET_Term5/Lab3/Lab3/bin/Debug/net6.0/publish/Lab3.pdb

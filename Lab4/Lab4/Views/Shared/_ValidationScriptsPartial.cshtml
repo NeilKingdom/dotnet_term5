@@ -1,0 +1,18 @@
+﻿<environment names="Development">
+    <script src="~/lib/jquery-valIDation/dist/jquery.valIDate.js"></script>
+    <script src="~/lib/jquery-valIDation-unobtrusive/jquery.valIDate.unobtrusive.js"></script>
+</environment>
+<environment names="Staging,Production">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.valIDate/1.17.0/jquery.valIDate.min.js"
+            asp-fallback-src="~/lib/jquery-valIDation/dist/jquery.valIDate.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.valIDator"
+            crossorigin="anonymous"
+            integrity="sha384-rZfj/ogBloos6wzLGpPkkOr/gpkBNLZ6b6yLy4o+ok+t/SAKlL5mvXLr0OXNi1Hp">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.valIDation.unobtrusive/3.2.9/jquery.valIDate.unobtrusive.min.js"
+            asp-fallback-src="~/lib/jquery-valIDation-unobtrusive/jquery.valIDate.unobtrusive.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.valIDator && window.jQuery.valIDator.unobtrusive"
+            crossorigin="anonymous"
+            integrity="sha384-ifv0TYDWxBHzvAk2Z0n8R434FL1Rlv/Av18DXE43N/1rvHyOG4izKst0f2iSLdds">
+    </script>
+</environment>
