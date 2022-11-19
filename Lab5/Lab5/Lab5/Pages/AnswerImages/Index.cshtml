@@ -1,0 +1,45 @@
+﻿@page
+@model Lab5.Pages.AnswerImages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerImage[0].FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerImage[0].Url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnswerImage[0].Question)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.AnswerImage) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                <img src="@item.Url">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Question)
+            </td>
+            <td>
+                <a asp-page="./Delete" asp-route-id="@item.AnswerImageId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
