@@ -1,0 +1,64 @@
+﻿@model Assignment2.Models.ViewModels.BrokerageViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="page-heading">
+    <h1>Index</h1>
+</div>
+
+<div>
+    <a asp-action="Create">Create New</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Brokerages.FirstOrDefault().Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brokerages.FirstOrDefault().Fee)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var brokerage in Model.Brokerages) 
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => brokerage.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => brokerage.Fee)
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-id="@brokerage.BrokerageId">Select</a> |
+                    <a asp-controller="Advertisements" asp-action="Index" asp-route-id="@brokerage.BrokerageId">Ads</a> |
+                    <a asp-action="Edit" asp-route-id="@brokerage.BrokerageId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@brokerage.BrokerageId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@brokerage.BrokerageId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Url.ActionContext.RouteData.Values["id"] != null)
+{
+    <h2>Subscribers to the brokerage</h2>
+    if (Model.Subscriptions.Count() > 0)
+    {
+        <table class="table">
+            <tr><td>Name</td></tr>
+            @foreach (var client in Model.Clients)
+            {
+                <tr><td>@client.FullName</td></tr>
+            }
+        </table>
+    }
+    else
+    {
+        <strong>No clients are subscribed to this brokerage</strong>
+    }
+}

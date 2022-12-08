@@ -1,0 +1,60 @@
+﻿article {
+    margin-top: 15%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-heading {
+    color: white;
+    background-color: #4d4d4d;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.logo, 
+.logo:hover {
+    color: black;
+    font-size: 24pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: solid;
+    border-width: 2px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.navbar-nav {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header-link {
+    background: rgb(53,48,205);
+    background: linear-gradient(90deg, rgba(53,48,205,1) 0%, rgba(77,86,167,1) 7%, rgba(73,255,238,1) 100%, rgba(0,212,255,1) 100%);
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+td.header-link a {
+    color: white !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+td.header-link:hover {
+    background: rgba(53,48,205,1);
+}
+
+.vertical thead {
+    display: inline-block;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none !important;
+}

@@ -1,0 +1,48 @@
+﻿@model Assignment2.Models.ViewModels.AdsViewModel
+@{
+    ViewData["Title"] = "Index";
+    var brokerage = Model.Brokerage;
+}
+
+<div class="page-heading">
+    <h1>Show ads for brokerage @Model.Brokerage.Title</h1>
+</div>
+
+<div>
+    <a asp-action="Create" asp-route-id="@brokerage.BrokerageId">Upload New</a>
+    <br />
+    <a asp-controller="Brokerages" asp-action="Index">Back to List</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Advertisements.FirstOrDefault().FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Advertisements.FirstOrDefault().AdUrl)
+            </th>
+        </tr>
+    </thead>
+
+    @if (Url.ActionContext.RouteData.Values["id"] != null)
+    {
+        <tbody>
+            @foreach (var ad in Model.Advertisements)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => ad.FileName)
+                    </td>
+                    <td>
+                        <img src="@ad.AdUrl" alt="@ad.FileName" width="400" height="400">
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@ad.AdvertisementId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    }
+</table>

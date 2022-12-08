@@ -1,0 +1,34 @@
+﻿@model Assignment2.Models.ViewModels.AdsViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="page-heading">
+    <h1>Upload</h1>
+    <h4>Upload an ad for brokerage @Model.Brokerage.Title</h4>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-route-id="@Model.Brokerage.BrokerageId" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <div class="btn btn-sm float-left">
+                    <input name="file" type="file">
+                </div>
+                <input type="submit" value="Upload Now" class="btn btn-primary" />
+            </div>
+            @if (ViewBag.FileErr != null)
+            {
+                <span class="text-danger">@ViewBag.FileErr</span>
+            }
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-route-id="@Model.Brokerage.BrokerageId">Back to List</a>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

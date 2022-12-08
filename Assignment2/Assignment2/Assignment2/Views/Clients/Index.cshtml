@@ -1,0 +1,70 @@
+﻿@model Assignment2.Models.ViewModels.BrokerageViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="page-heading">
+    <h1>Index</h1>
+</div>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Clients.FirstOrDefault().FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clients.FirstOrDefault().LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clients.FirstOrDefault().BirthDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model.Clients)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => client.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => client.FirstName)
+                </td>                
+                <td>
+                    @Html.DisplayFor(modelItem => client.BirthDate)
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-id="@client.ClientId">Select</a> |
+                    <a asp-action="Edit" asp-route-id="@client.ClientId">Edit</a> |
+                    <a asp-action="EditSubscriptions" asp-route-id="@client.ClientId">Edit Subscriptions</a> |
+                    <a asp-action="Details" asp-route-id="@client.ClientId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@client.ClientId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- This renders client subscriptions on select -->
+@if (Url.ActionContext.RouteData.Values["id"] != null)
+{
+    <h2>Member of the following brokerages</h2>
+    @if (Model.Subscriptions.Count() > 0)
+    {
+        <table class="table">
+            <tr><td>Name</td></tr>
+            @foreach (var subscription in Model.Subscriptions)
+            {
+                <tr><td>@subscription.Broker.Title</td></tr>
+            }
+        </table>
+    }
+    else
+    {
+        <strong>No subscription records exist</strong>
+    }
+}

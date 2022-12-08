@@ -1,0 +1,29 @@
+﻿@model Assignment2.Models.ViewModels.AdsViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="page-heading">
+    <h1>Delete ad for brokerage @Model.Brokerage.Title</h1>
+    <h4>Advertisement</h4>
+    <h3>Are you sure you want to delete this?</h3>
+</div>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Advertisements.FirstOrDefault().FileName)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Advertisements.FirstOrDefault().FileName
+        </dd>
+        <dd class="col-sm-10">
+            <img src="@Model.Advertisements.FirstOrDefault().AdUrl" alt="@Model.Advertisements.FirstOrDefault().FileName" width="400" height="400">
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" asp-route-id="@Model.Advertisements.FirstOrDefault().AdvertisementId" method="post">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" asp-route-id="@Model.Brokerage.BrokerageId">Back to List</a>
+    </form>
+</div>
